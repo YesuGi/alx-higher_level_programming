@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """ prints the State object with the name passed as argument from the database
 """
@@ -18,4 +17,3 @@ if __name__ == "__main__":
     for instance in (session.query(State.name, City.id, City.name)
                      .filter(State.id == City.state_id)):
         print(instance[0] + ": (" + str(instance[1]) + ") " + instance[2])
-
